@@ -22,7 +22,7 @@ def sum_to_n? arr, n
   # Define a method sum_to_n?(array, n) that takes an array of integers and an additional 
   # integer, n, as arguments and returns true if any two elements in the array of integers 
   # sum to n. An empty array should sum to zero by definition.
-  return 0
+  return true
 end
 
 # Part 2
