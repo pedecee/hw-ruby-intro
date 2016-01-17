@@ -6,7 +6,10 @@ def sum arr
   # YOUR CODE HERE
   # Define a method sum(array) that takes an array of integers as an argument 
   # and returns the sum of its elements. For an empty array it should return zero.
-  return 0
+  return 0 if arr.empty?
+  total = 0
+  arr.each { |a| total += a }
+  return total
 end
 
 def max_2_sum arr
@@ -14,15 +17,20 @@ def max_2_sum arr
   # Define a method max_2_sum(array) which takes an array of integers as an argument 
   # and returns the sum of its two largest elements. For an empty array it should return zero. 
   # For an array with just one element, it should return that element.
-  return 0
+  return 0 if arr.empty?
+  return arr[0] if arr.length == 1
+  return arr[0] + arr[1] if arr.length == 2
+  arr.sort! { |x, y| y <=> x }
+  return arr[0] + arr[1]
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-  # Define a method sum_to_n?(array, n) that takes an array of integers and an additional 
-  # integer, n, as arguments and returns true if any two elements in the array of integers 
-  # sum to n. An empty array should sum to zero by definition.
-  return true
+  # Define a method sum_to_n?(array, n) that takes an array of integers and 
+  # an additional integer, n, as arguments and 
+  # returns true if any two elements in the array of integers sum to n. 
+  # An empty array should sum to zero by definition.
+  return true #if arr.sum() == 0
 end
 
 # Part 2
