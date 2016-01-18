@@ -71,3 +71,9 @@ require 'ruby_intro.rb'
     end
   end
 #end
+
+arr = []
+n = 0
+puts sum_to_n?(arr, n)
+
+
